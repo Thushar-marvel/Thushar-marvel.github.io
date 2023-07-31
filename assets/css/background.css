@@ -1,0 +1,9 @@
+w/* styles.css */
+
+/* Set the background image to the GIF */
+body {
+  background-image: url("./assets/img/file.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

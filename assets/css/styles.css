@@ -8,16 +8,21 @@
   --hue-color: 250;
   /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
   /* HSL color mode */
-  --first-color: hsl(var(--hue-color), 69%, 61%);
+  /* --first-color: hsl(var(--hue-color), 69%, 61%); */
+  --first-color: hsl(203, 75%, 57%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
+  /* --title-color: hsl(var(--hue-color), 8%, 15%); */
+  --title-color: hsl(240, 23%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: #FFF;
+  /* --body-color: hsl(var(--hue-color), 60%, 99%); */
+  --body-color: hsla(235, 48%, 9%, 0.483); 
+
+
+  --container-color: #f5f5f5a4;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   /*========== Font and typography ==========*/
@@ -63,14 +68,21 @@
 body.dark-theme {
   /* HSL color mode */
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
-  --title-color: hsl(var(--hue-color), 8%, 95%);
+  /* --title-color: hsl(var(--hue-color), 8%, 95%); */
+  --title-color: hsl(0, 25%, 94%); 
   --text-color: hsl(var(--hue-color), 8%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 28%, 12%);
+  /* --body-color: hsl(var(--hue-color), 28%, 12%); */
+  --body-color: hsla(236, 46%, 14%, 0.483);
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
+
+
+
+
+
 
 /*========== Button Dark/Light ==========*/
 .nav__btns {
@@ -105,8 +117,45 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
+
+  background-image: url("./assets/img/file.gif");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+
   color: var(--text-color);
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 200px; /* Keep the vertical margin intact and reduce the horizontal margin */
+}
+
+.col {
+  flex-basis: calc(25% ); /* Make each column take 25% width minus some spacing (8px) */
+  /*margin: 0 -20px; Reduce only the horizontal margin between columns */
+  /*box-sizing: border-box; Ensure padding and border are included in the column width */
+}
+
+/* Optional: Add responsive styles to adjust the layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .col {
+      flex-basis: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 h1, h2, h3, h4 {
   color: var(--title-color);
@@ -522,29 +571,9 @@ img {
   background-color: var(--first-color);
 }
 
-.skills__html {
-  width: 90%;
-}
 
-.skills__css {
-  width: 85%;
-}
 
-.skills__js {
-  width: 75%;
-}
 
-.skills__react {
-  width: 85%;
-}
-
-.skills__javas {
-  width: 80%;
-}
-
-.skills__node {
-  width: 80%;
-}
 
 .skills__firebase {
   width: 60%;
@@ -582,29 +611,13 @@ img {
   width: 95%;
 }
 
-.skills__cpp {
-  width: 90%;
-}
 
-.skills__java {
-  width: 90%;
-}
 
 .skills__sql {
   width: 95%;
 }
 
-.skills__gcp {
-  width: 85%;
-}
 
-.skills__aws {
-  width: 75%;
-}
-
-.skills__gpu {
-  width: 90%;
-}
 
 .skills__pt {
   width: 72%;
@@ -1118,6 +1131,7 @@ img {
   }
   .home__blob {
     width: 180px;
+
   }
   .skills__title {
     font-size: var(--normal-font-size);
@@ -1310,6 +1324,7 @@ img {
     margin-top: 4.5rem;
   }
 }
+
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
